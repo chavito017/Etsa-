@@ -4,7 +4,7 @@ from principal.views import *
 urlpatterns = [
     
     path('parametros/',Parametros, name='leerpar'),
-#--------------------------------------------------URL Categoriataller ------------------------------------------------------------------------#
+#--------------------------------------------------URL Categoriataller -------------------------------------------------------------------------#
     
 path('Categoriataller/', ListadoCategoriataller.as_view(template_name = "crud/Categoriataller/tables.html"), name='leerre'),
 
@@ -16,7 +16,7 @@ path('Categoriataller/editar/<int:pk>', CategoriatallerActualizar.as_view(templa
 
 # La ruta 'eliminar' que usaremos para eliminar un Categoria o registro de la Base de Datos 
 path('Categoriataller/eliminar/<int:pk>', CategoriatallerEliminar.as_view(), name='crud/Categoriataller/eliminar.html'),     
- #---------------------------------------------------URL Categoriataller ------------------------------------------------------------------------#
+#---------------------------------------------------URL Categoriataller -------------------------------------------------------------------------#
  
 
 # --------------------------------------------------------------------URL Empresa ---------------------------------------------------------------#
@@ -34,7 +34,7 @@ path('Empresa/eliminar/<int:pk>', EmpresaEliminar.as_view(), name='crud/Empresa/
 # -------------------------------------------------------------------URL Empresa ---------------------------------------------------------------#
 
 
-#--------------------------------------------------------URL Usuario ------------------------------------------------------------------------#
+#--------------------------------------------------------URL Usuario ---------------------------------------------------------------------------#
     
 path('Usuario/', ListadoUsuario.as_view(template_name = "crud/Usuario/tables.html"), name='leerru'),
 
@@ -46,10 +46,10 @@ path('Usuario/editar/<int:pk>', UsuarioActualizar.as_view(template_name = "crud/
 
 # La ruta 'eliminar' que usaremos para eliminar un Categoria o registro de la Base de Datos 
 path('Usuario/eliminar/<int:pk>', UsuarioEliminar.as_view(), name='crud/Usuario/eliminar.html'),     
- #---------------------------------------------------URL Usuario ------------------------------------------------------------------------#
+#---------------------------------------------------URL Usuario ------------------------------------------------------------------------------#
 
 path('usuarioC/', ListadoUsuario.as_view(template_name = "tienda/index_principal.html"), name='tienda'),
-path('usuarioC/detaller<int:pk>', UsuarioDetalle.as_view(template_name = "tienda/index.html"), name='tienda'),
+path('usuarioC/detaller<int:id>', UsuarioDetalle.as_view(template_name = "tienda/index2.html"), name='tienda2'),
 
 
 #------------------------------------------------------URL Departamento ------------------------------------------------------------------------#   
@@ -63,9 +63,9 @@ path('Departamento/editar/<int:pk>', DepartamentoActualizar.as_view(template_nam
 
 # La ruta 'eliminar' que usaremos para eliminar un Categoria o registro de la Base de Datos 
 path('Departamento/eliminar/<int:pk>',DepartamentoEliminar.as_view(), name='crud/Departamento/eliminar.html'),     
-#---------------------------------------------------URL Departamento ------------------------------------------------------------------------#
+#---------------------------------------------------URL Departamento -------------------------------------------------------------------------#
 
-#----------------------------------------------------URL Municipio ------------------------------------------------------------------------#
+#----------------------------------------------------URL Municipio ---------------------------------------------------------------------------#
     
 path('Municipio/', ListadoMunicipio.as_view(template_name = "crud/Municipio/tables.html"), name='leermun'),
 
@@ -77,9 +77,9 @@ path('Municipio/editar/<int:pk>', MunicipioActualizar.as_view(template_name = "c
 
 # La ruta 'eliminar' que usaremos para eliminar un Categoria o registro de la Base de Datos 
 path('Municipio/eliminar/<int:pk>', MunicipioEliminar.as_view(), name='crud/Municipio/eliminar.html'),     
-# --------------------------------------------URL Municipio ------------------------------------------------------------------------#
+# --------------------------------------------URL Municipio ----------------------------------------------------------------------------------------#
 
-# ---------------------------------------------------URL Categoria Servicio------------------------------------------------------------------------#
+# ---------------------------------------------------URL Categoria Servicio-------------------------------------------------------------------------#
 path('Categoriaservicio/', ListadoCategoriaservicio.as_view(template_name = "crud/Categoriaservicio/tables.html"), name='leercser'),
 
 # La ruta 'detalles' en donde mostraremos una pagina con los detalles de un Categoria o registro 
@@ -93,7 +93,7 @@ path('Categoriaservicio/eliminar/<int:pk>', CategoriaservicioEliminar.as_view(),
 # ---------------------------------------------------URL Categoria Servicio------------------------------------------------------------------------#
 
 
-#--------------------------------------------------URL tipo empresario ------------------------------------------------------------------------#
+#--------------------------------------------------URL tipo empresario ----------------------------------------------------------------------------#
 
 path('Tpempresario/', ListadoTpempresario.as_view(template_name = "crud/Tpempresario/tables.html"), name='leertiemp'),
 
@@ -108,7 +108,7 @@ path('Tpempresario/eliminar/<int:pk>', TpempresarioEliminar.as_view(), name='cru
 #---------------------------------------------------URL tipo empresario ------------------------------------------------------------------------#
 
 
-#-----------------------------------------------------URL servicio ---------------------------------------------------------------------------#
+#-----------------------------------------------------URL servicio -----------------------------------------------------------------------------#
 
 path('Servicio/', ListadoServicio.as_view(template_name = "crud/Servicio/tables.html"), name='leerser'),
 
@@ -120,10 +120,10 @@ path('Servicio/editar/<int:pk>', ServicioActualizar.as_view(template_name = "cru
 
 # La ruta 'eliminar' que usaremos para eliminar un Categoria o registro de la Base de Datos 
 path('Servicio/eliminar/<int:pk>', ServicioEliminar.as_view(), name='crud/Servicio/eliminar.html'),     
-#---------------------------------------------------URL servicio ------------------------------------------------------------------------#
+#---------------------------------------------------URL servicio ----------------------------------------------------------------------------#
 
 
-#--------------------------------------------------URL agendamiento ------------------------------------------------------------------------#
+#--------------------------------------------------URL agendamiento -------------------------------------------------------------------------#
 
 path('Agendamiento/', ListadoAgendamiento.as_view(template_name = "crud/Agendamiento/tables.html"), name='leerag'),
 

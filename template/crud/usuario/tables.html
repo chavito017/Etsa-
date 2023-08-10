@@ -239,7 +239,7 @@
                       <tbody>
                         {% for Usuario in object_list %}
                         <tr>
-                          <td>{{ Usuario.idUsuario}}</td>
+                          <td>{{ Usuario.id}}</td>
                           <td>{{ Usuario.nombre}}</td>
                           <td>{{ Usuario.apellido}}</td>
                           <td>{{ Usuario.telefono}}</td>
@@ -253,14 +253,14 @@
 
 
                           <td>
-                            <form method="POST" action="eliminar/{{Usuario.idUsuario}}">
+                            <form method="POST" action="eliminar/{{Usuario.id}}">
                               {% csrf_token %}
                               <div class="btn-group">
 
                                 <!-- Creamos 3 botones que son ver, Editar y Eliminar, nos sirven para gestionar nuestros registros o postres -->
-                                <a href="detalle/{{Usuario.idUsuario}}" title="Ver" type="button"
+                                <a href="detalle/{{Usuario.id}}" title="Ver" type="button"
                                   class="btn btn-success">Ver </a>
-                                <a href="editar/{{Usuario.idUsuario}}" title="Editar" type="button"
+                                <a href="editar/{{Usuario.id}}" title="Editar" type="button"
                                   class="btn btn-primary">Editar </a>
                                 <button class="btn btn-danger" onclick="return eliminar();" type="submit">
                                   Eliminar

@@ -54,21 +54,25 @@
         </header>
         <!-- Section-->
         <section class="py-5">
-            {%for usuario in object_list %}
+            {%for Usuario in object_list %}
             <div class="container px-4 px-lg-5 mt-5">
                 
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="/static/media/img/{{usuario.foto}}" alt="..." />
+                            <img src="/static/media/img/{{Usuario.foto}}" >
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder"> {{usuario.nombre}}</h5>
+                                    <h5 class="fw-bolder"> {{Usuario.nombre}}</h5>
                                     <!-- Product price-->
-                                    {{usuario.correo}}
+                                    {{Usuario.id}}
+                                    {{Usuario.correo}}
+                                    {{Usuario.apellido}} 
+                                    {{Usuario.telefono}}
+                                    {{ Usuario.genero}}
                                 </div>
                             </div>
                             <!-- Product actions-->

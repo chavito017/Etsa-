@@ -27,5 +27,12 @@ urlpatterns = [
     path('', LoginView.as_view(template_name='inicio.html'), name="inicio"),
     path('logout/', LogoutView.as_view(template_name='login.html'), name="logout"),
     path('login/', LoginView.as_view(template_name='login.html'), name="login"),
+    path('usuario/', Usuario, name="usuario"),
     
+    
+    #registro que guarde a la base de datos 
+    path('usuarios/', usuarios, name="usuarios"),
+    path('registro', SignUpView.as_view(template_name='register.html'), name='registro'),
+  
+
 ]
