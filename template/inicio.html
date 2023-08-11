@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./images/1.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/57d17138c5.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/images/inicio/loguito..png">
-    <title>etsa</title>
+    <title>ETSA</title>
 </head>
 
 <body>
@@ -20,12 +20,8 @@
         <!-- Barra de navegación -->
         <nav class="navbar">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="{% url 'login' %}">Mi Cuenta</a></li>
-                <li><a href="https://www.mercadolibre.com.co/#from=homecom" target="_blank">
+                <li><a href="#">SOBRE ETSA</a></li>
+                <li><a href="{% url 'login' %}" >MI CUENTA
                         <i class="fa-sharp fa-solid fa-car"></i></a>
                 </li>
             </ul>
@@ -39,24 +35,26 @@
     <main>
         <!-- Video -->
         <div class="video1">
-            <video onloadedmetadata="this.mute=false"
+            <video onloadedmetadata="this.muted=true" controls
                 src="/static/imagen/inicio/The All-New 2024 Ford Mustang®️_ A Wake-Up Call _ Ford.mp4"
-                autoplay="false" type="video/mp4"  loop="false"></video>
+                type="video/mp4" loop></video>
         </div>
+        
 
         <!-- Sección de celulares -->
         <section class="content sau">
             <h2 class="tittle">Talleres</h2>
             <p>tecnologia Avanzada</p>
 
-            <div class="box-container">
-                <div class="box1">
+            <div class="box-container"  >
+                <div class="box1" style="background-image: url(/static/imagen/inicio/taller3.jpg);" >
                     <h4>Reparaciones la 4°</h4>
                 </div>
-                <div class="box2">
+                <div class="box2" style=" background-image: url(/static/imagen/inicio/taller1.jpg)">
                     <h4>Lamina y pientura</h4>
                 </div>
-                <div class="box3">
+                <div class="box3" style="background-image: url(/static/imagen/inicio/taller2.jpg);
+                " >
                     <h4>DR°</h4>
                 </div>
 
@@ -87,31 +85,22 @@
                             <a href="#">Promociones</a>
                         </div>
                         <div class="box__footer">
-                            <h2>Institucional</h2>
-                            <a href="https://www.google.com">Autogestión</a>
-                            <a href="#">Blog Claro</a>
-                            <a href="#">Sala de prensa</a>
-                            <a href="#">Trabaja con nosotros</a>
-                        </div>
-                        <div class="box__footer">
                             <h2>Soporte</h2>
                             <a href="#">WhatsApp</a>
-                            <a href="#">App Mi Claro</a>
-                            <a href="#">Autogestión</a>
                             <a href="#">Preguntas Frecuentes</a>
                         </div>
                         <div class="box__footer">
                             <h2>Redes Sociales</h2>
-                            <a href="https://es-la.facebook.com/">
+                            <a href="">
                                 <i class="fab fa-facebook-square">
                                 </i> Facebook</a>
-                            <a href="https://twitter.com/">
+                            <a href="">
                                 <i class="fab fa-twitter-square">
                                 </i> Twitter</a>
-                            <a href="https://www.linkedin.com/login/es">
+                            <a href="">
                                 <i class="fab fa-linkedin">
                                 </i> Linkedin</a>
-                            <a href="https://www.instagram.com/">
+                            <a href="">
                                 <i class="fab fa-instagram-square">
                                 </i> Instagram</a>
                         </div>

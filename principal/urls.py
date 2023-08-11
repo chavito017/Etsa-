@@ -48,8 +48,8 @@ path('Usuario/editar/<int:pk>', UsuarioActualizar.as_view(template_name = "crud/
 path('Usuario/eliminar/<int:pk>', UsuarioEliminar.as_view(), name='crud/Usuario/eliminar.html'),     
  #---------------------------------------------------URL Usuario ------------------------------------------------------------------------#
 
-path('usuarioC/', ListadoUsuario.as_view(template_name = "tienda/index_principal.html"), name='tienda'),
-path('usuarioC/detaller<int:pk>', UsuarioDetalle.as_view(template_name = "tienda/index.html"), name='tienda'),
+path('usuarioC/', ListadoUsuario.as_view(template_name = "tienda/principal.html"), name='tienda1'),
+path('usuarioC/tienda/<int:pk>', UsuarioDetalle.as_view(template_name = "tienda/producto.html"), name='tienda'),
 
 
 #------------------------------------------------------URL Departamento ------------------------------------------------------------------------#   
