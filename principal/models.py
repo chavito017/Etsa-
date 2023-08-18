@@ -85,13 +85,9 @@ class Departamento(models.Model):
     nombre = models.CharField(max_length=45, blank=True, null=True)
     codigo = models.CharField(max_length=45, blank=True, null=True)
     
-
     class Meta:
         managed = False
         db_table = 'departamento'
-def __str__(self):
-        txt='{0}'
-        return txt.format(self.nombre)
 
 class Empresa(models.Model):
     nombre = models.CharField(max_length=45, blank=True, null=True, db_comment='guarda el nombre de la empresa ')
@@ -179,9 +175,6 @@ class Tpempresario(models.Model):
     class Meta:
         managed = False
         db_table = 'tpempresario'
-    def __str__(self):
-        txt='{0}'
-        return txt.format(self.nombre)
 
 
 class Usuario(models.Model):
