@@ -139,7 +139,6 @@
                                            </td>
                                             <td>
                                             <div class="col-lg-7">
-<<<<<<< HEAD
                                                 <label for="municipio_id" >Categoria Taller</label>
                                                 {{ form.municipio}} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto --> 
                                             </div>
@@ -147,7 +146,6 @@
                                               <label for="categoriataller_id" >Categoria Taller</label>
                                               {{ form.categoriataller}} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto --> 
                                           </div>
-=======
                                                 <label for="Categoriataller_id" >Categoria Taller</label>
                                                 {{ form.Categoriataller_id}} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto --> 
                                             </div>
@@ -156,7 +154,6 @@
                                               {{ form.Municipio_id}} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto --> 
                                           </div>
                                       </td> 
->>>>>>> 23a0778bd771fada3ebce7d654cb7ba6d285e44d
                                         </td>   
           
                                       </tr> 
@@ -190,22 +187,18 @@
                           <th>Direccion</th>
                           <th>Telefono</th>
                           <th>Correo</th>
-<<<<<<< HEAD
                           <th>Razon Social</th>
                           <th>categoriataller</th> 
                           {% comment %} <th>categoriataller</th> {% endcomment %}
-=======
                           <th>Razon Social</th>                    
                           <th>Categoria Taller</th>
                           <th>Municipio</th>
->>>>>>> 23a0778bd771fada3ebce7d654cb7ba6d285e44d
                                               
                         </tr>
                       </thead>
                       <tbody>
                         {% for Empresa in object_list %}
                           <tr>
-<<<<<<< HEAD
                             <td>{{ Empresa.id}}</td>
                             <td>{{ Empresa.nombre}}</td>
                             <td>{{ Empresa.direccion }}</td>
@@ -214,19 +207,15 @@
                             <td>{{ Empresa.razonSocial }}</td>
                             <td>{{ Empresa.Categoriataller_id}}</td>
                             <td>{{ Empresa.Municipio_id}}</td>
-=======
-<<<<<<< HEAD
+
                             <td>{{ servicio.id}}</td>
                             <td>{{ servicio.nombre}}</td>
-=======
                             <td>{{ empresa.id}}</td>
                             <td>{{ empresa.nombre}}</td>
->>>>>>> 23a0778bd771fada3ebce7d654cb7ba6d285e44d
                             <td>{{ empresa.direccion }}</td>
                             <td>{{ empresa.telefono }}</td>
                             <td>{{ empresa.correo }}</td>
                             <td>{{ empresa.razonSocial }}</td>
-<<<<<<< HEAD
                             <td>{{ servicio.municipio_id}}</td>
                             <td>{{ servicio.categoriataller_id}}</td>
 
@@ -237,23 +226,18 @@
 =======
                             <td>{{ empresa.Categoriataller_id}}</td>
                             <td>{{ empresa.Municipio_id}}</td>
->>>>>>> 0d4a5fa075b96aae3d16f608ab6d3332a701cda1
                             
                                                       
                             <td>
                               <form method="POST" action="eliminar/{{Empresa.id}}">
->>>>>>> 23a0778bd771fada3ebce7d654cb7ba6d285e44d
                                   {% csrf_token %}
                                   <div class="btn-group">
 
                                       <!-- Creamos 3 botones que son ver, Editar y Eliminar, nos sirven para gestionar nuestros registros o postres -->
-<<<<<<< HEAD
                                       <a href="detalle/{{servicio.id}}" title="Ver" type="button" class="btn btn-success">Ver </a>
                                       <a href="editar/{{servicio.id}}" title="Editar" type="button" class="btn btn-primary">Editar </a>
-=======
                                       <a href="detalle/{{Empresa.id}}" title="Ver" type="button" class="btn btn-success">Ver </a>
                                       <a href="editar/{{Empresa.id}}" title="Editar" type="button" class="btn btn-primary">Editar </a>
->>>>>>> 23a0778bd771fada3ebce7d654cb7ba6d285e44d
                                       <button class="btn btn-danger" onclick="return eliminar();" type="submit">
                                         Eliminar
                                       </button>

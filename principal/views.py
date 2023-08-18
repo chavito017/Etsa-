@@ -1,10 +1,40 @@
-from django.shortcuts import render
+from django import forms 
+from django.shortcuts import redirect, render
 from principal.models import *
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView 
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse
 from django.contrib import messages 
+from django.forms.models import modelform_factory
+
+
+from django import forms 
+from django.contrib.auth import authenticate,get_user_model,authenticate, login
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse, HttpResponseRedirect
+from .forms import *
+
+
+class SignUpView(CreateView):
+    model = AuthUser
+    form_class = SignUpForm
+
+    def form_valid(self, form):
+        '''
+        En este parte, si el formulario es valido guardamos lo que se obtiene de él y usamos authenticate para que el usuario incie sesión luego de haberse registrado y lo redirigimos al index
+        '''
+        form.save()
+        usuario = form.cleaned_data.get('username')
+        password = form.cleaned_data.get('password1')
+        usuario = authenticate(username=usuario, password=password)
+        login(self.request, usuario)
+        return redirect('login')
+
+
+
+
 
 # Create your views here.
 def Home(request):
@@ -16,6 +46,15 @@ def Parametros (request):
 
 def Login(request):
     return render (request, "login.html")
+
+#registro que guarde a la base de datos 
+def usuarios (request):
+    usuarioFormulario=modelform_factory(Usuario,exclude=['cotraseña','genero'])
+    formulario=usuarioFormulario()
+    data={
+        'formulario':formulario
+    }
+    return render(request,'inicio.html', data)
 
 #------------------------------------------------------------------------Categoriataller-----------------------------------------------------#
 class ListadoCategoriataller(CreateView,ListView,SuccessMessageMixin):
@@ -121,6 +160,7 @@ class UsuarioEliminar(SuccessMessageMixin, DeleteView):
         success_message = 'Usuario Eliminado Correctamente !' # Mostramos este Mensaje luego de Editar un Postre 
         messages.success (self.request, (success_message))       
         return reverse('principal:leerre') # Redireccionamos a la vista principal 'leer'
+
     
 #-------------------------------------------------------------------fin usuario---------------------------------------------------------------#
 

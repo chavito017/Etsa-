@@ -9,8 +9,8 @@ body{
 /* clase login box */
 .login-box{ 
     width: 360px;
-    height: 420px;
-    color: rgb(236, 228, 228);
+    background-color: #f1f1f18a;
+    /* color: rgb(236, 228, 228); */
     top: 55%;
     left: 50%; /*posicion*/
     position: absolute;
@@ -74,7 +74,7 @@ body{
     text-decoration: none;
     font-size: 15px;
     line-height: 1px;
-    color: rgb(114, 187, 187);
+    color:white;
 }
 .login-box a:hover{
     color: rgb(219, 173, 167);
